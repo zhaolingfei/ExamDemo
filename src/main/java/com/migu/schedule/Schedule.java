@@ -15,8 +15,8 @@ import com.migu.schedule.info.TaskInfo;
  */
 public class Schedule {
 
-    public static Map<String,Map<String,String>> param;
-    public static Map<String,String> taskparam;
+    public static Map<String,Map<String,String>> param ;
+    public static Map<String,String> taskparam ;
 
     public int init() {
         param= new HashMap<String,Map<String,String>>();
@@ -102,14 +102,20 @@ public class Schedule {
 
 
     public int scheduleTask(int threshold) {
-        // TODO 方法未实现
+        if(threshold<=0){
+            return ReturnCodeKeys.E002;//调度阈值非法
+        }
+
+
         return ReturnCodeKeys.E014;
     }
 
 
     public int queryTaskStatus(List<TaskInfo> tasks) {
-        // TODO 方法未实现
-        return ReturnCodeKeys.E000;
+        if(null==tasks){
+            return ReturnCodeKeys.E016;
+        }
+        return ReturnCodeKeys.E015;
     }
 
 }
