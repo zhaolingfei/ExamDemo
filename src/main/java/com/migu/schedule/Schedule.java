@@ -15,8 +15,8 @@ import com.migu.schedule.info.TaskInfo;
  */
 public class Schedule {
 
-    public static Map<String,Map<String,String>> param ;
-    public static Map<String,String> taskparam ;
+    public static Map<String,Map<String,String>> param;
+    public static Map<String,String> taskparam;
 
     public int init() {
         param= new HashMap<String,Map<String,String>>();
